@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.js     text eol=lf
+*.ts     text eol=lf
+*.php    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.xml    text eol=lf
+LICENSE  text eol=lf
+
+# Binary safety
+*.png    binary
+*.jpg    binary
+*.gif    binary
+*.ico    binary

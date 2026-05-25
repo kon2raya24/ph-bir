@@ -1,0 +1,14 @@
+{
+  "name": "ph-bir",
+  "private": true,
+  "version": "0.1.0",
+  "description": "BIR (Bureau of Internal Revenue) tax utilities for the Philippines — VAT, percentage tax, form references. JS + PHP parity.",
+  "workspaces": [
+    "packages/js"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@ph-dev-utils/bir",
+    "test": "npm run test --workspace=@ph-dev-utils/bir"
+  },
+  "license": "MIT"
+}
