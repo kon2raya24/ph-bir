@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-05-28
+
+### Fixed
+
+- **Blank README on npmjs.com.** The published npm tarball declared `README.md` in `files` but had no per-package `packages/js/README.md`, so the npm page rendered empty. Added the package README (install, JS + PHP usage, verified-rates table, family links). No code or API change.
+
 ## [0.1.0] - 2026-05-25
 
 Initial release. BIR (Bureau of Internal Revenue) tax utilities for the Philippines, JS + PHP parity.
