@@ -6,3 +6,6 @@ export type { PercentageTaxResult } from './percentage-tax.js';
 
 export { listForms, findForm } from './forms.js';
 export type { BirForm, FormFrequency, FormStatus } from './forms.js';
+
+export { incomeTaxGraduated, incomeTax8 } from './income-tax.js';
+export type { IncomeTaxResult, IncomeTax8Result } from './income-tax.js';

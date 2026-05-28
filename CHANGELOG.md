@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-28
+
+### Added
+
+- **Individual income tax** — `incomeTaxGraduated(taxableIncome, { asOf? })` / `IncomeTax::graduated()` and `incomeTax8(gross, { mixedIncome? })` / `IncomeTax::eightPercent()` (JS + PHP).
+  - **Graduated TRAIN rates**, date-aware: the lower **2023-onward** schedule and the **2018–2022** schedule (looked up by `asOf`). First ₱250,000 exempt. Boundaries verified: ₱400k→22,500 · ₱800k→102,500 · ₱2M→402,500 · ₱8M→2,202,500 (2023-onward).
+  - **8% optional flat tax** for self-employed/professionals with gross ≤ ₱3M, in lieu of graduated income tax + the 3% percentage tax. Pure SEP = 8% × (gross − ₱250k); mixed-income = 8% × gross. Flags ineligibility above ₱3M.
+  - Data: `data/income-tax.json` with `_meta` (NIRC § 24(A)(2), RA 10963 / TRAIN; source URL; `verified_on`).
+- Tests: new vitest + PHPUnit covering bracket boundaries, mid-bracket math, the 2018–2022 vs 2023 boundary, and the 8% pure-SEP/mixed/eligibility cases.
+
 ## [0.1.1] - 2026-05-28
 
 ### Fixed
