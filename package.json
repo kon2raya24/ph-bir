@@ -1,8 +1,8 @@
 {
   "name": "ph-bir",
   "private": true,
-  "version": "0.1.0",
-  "description": "BIR (Bureau of Internal Revenue) tax utilities for the Philippines — VAT, percentage tax, form references. JS + PHP parity.",
+  "version": "0.3.0",
+  "description": "BIR (Bureau of Internal Revenue) tax utilities for the Philippines — VAT, percentage tax, income tax, expanded withholding tax (EWT), form references. JS + PHP parity.",
   "workspaces": [
     "packages/js"
   ],

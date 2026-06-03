@@ -1,7 +1,7 @@
 {
   "name": "@ph-dev-utils/bir",
-  "version": "0.2.0",
-  "description": "BIR (Bureau of Internal Revenue) tax utilities for the Philippines — VAT (12% / ₱3M threshold), percentage tax (3% standing, with historical 1% rate awareness), individual income tax (graduated TRAIN rates + 8% option), and a reference list of commonly-used BIR forms.",
+  "version": "0.3.0",
+  "description": "BIR (Bureau of Internal Revenue) tax utilities for the Philippines — VAT (12% / ₱3M threshold), percentage tax (3% standing, with historical 1% rate awareness), individual income tax (graduated TRAIN rates + 8% option), expanded withholding tax (EWT, RR 11-2018), and a reference list of commonly-used BIR forms.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -30,7 +30,10 @@
     "tax",
     "vat",
     "percentage-tax",
-    "withholding"
+    "withholding",
+    "ewt",
+    "expanded-withholding-tax",
+    "income-tax"
   ],
   "devDependencies": {
     "typescript": "^5.4.0",

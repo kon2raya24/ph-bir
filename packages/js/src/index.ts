@@ -9,3 +9,6 @@ export type { BirForm, FormFrequency, FormStatus } from './forms.js';
 
 export { incomeTaxGraduated, incomeTax8 } from './income-tax.js';
 export type { IncomeTaxResult, IncomeTax8Result } from './income-tax.js';
+
+export { listEwtCategories, ewtRate, computeEWT, EWT_META } from './ewt.js';
+export type { EwtCategory, EwtRateKind, EwtOptions, EwtResult } from './ewt.js';

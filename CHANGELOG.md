@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-06-03
+
+### Added
+
+- **Expanded Withholding Tax (EWT)** — `computeEWT(amount, category, opts?)`, `ewtRate(category, opts?)`, `listEwtCategories()` (JS) and `Ewt::compute()` / `Ewt::rate()` / `Ewt::listCategories()` (PHP), plus `EWT_META` / `Ewt::meta()`.
+  - **8 common creditable-withholding categories** under RR 11-2018 (TRAIN era): professional & commission fees for individuals (5% / 10%) and non-individuals (10% / 15%), rental (5%), contractors/subcontractors (2%), and top-withholding-agent purchases of goods (1%) and services (2%).
+  - **Threshold logic** encoded: the lower professional/commission rate applies only with a sworn declaration on file and the payee's annual gross at or below the threshold (₱3M individuals / ₱720k non-individuals), and — for individuals — a non-VAT-registered payee. With no options the higher rate is returned (the conservative default).
+  - Data: `data/ewt.json` with `_meta` (source RR 11-2018, source URL, `verified_on`).
+- Tests: new vitest + PHPUnit covering every category's rate, the threshold/sworn-declaration/VAT conditions, centavo rounding, and input validation.
+
+### Notes
+
+- **ATC (Alphanumeric Tax Code)** values are intentionally omitted — confirm against BIR Form 0619-E / 1601-EQ before filing.
+- **Documentary Stamp Tax (DST)** remains deferred pending verification of the 2025 **CMEPA (RA 12214)** rate revisions (the schedule is currently in flux and public sources disagree).
+
 ## [0.2.0] - 2026-05-28
 
 ### Added
@@ -42,4 +57,5 @@ Initial release. BIR (Bureau of Internal Revenue) tax utilities for the Philippi
 - **BIR RDO (Revenue District Office) directory**.
 - **BIR Form 2316 generator** — planned for `@ph-dev-utils/payroll` v0.4 (employee/payroll-coupled).
 
+[0.3.0]: https://github.com/kon2raya24/ph-bir/releases/tag/v0.3.0
 [0.1.0]: https://github.com/kon2raya24/ph-bir/releases/tag/v0.1.0
